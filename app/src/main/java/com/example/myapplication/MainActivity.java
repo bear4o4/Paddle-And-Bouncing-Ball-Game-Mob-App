@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         super.onCreate(savedInstanceState);
         MyCanvas can = new MyCanvas(this);
 
-        can.setBackgroundColor(Color.WHITE);
+        can.setBackgroundColor(Color.parseColor("#CC6386"));
         setContentView(can);
 
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
@@ -95,8 +95,8 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         bally = 50;
         ballradius = 50;
 
-        deltax = 10;
-        deltay = 10;
+        deltax = 15;
+        deltay = 15;
 
         gameRunning = true;
     }
@@ -137,11 +137,11 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             height = c.getHeight();
 
             Paint red = new Paint();
-            red.setColor(Color.RED);
+            red.setColor(Color.parseColor("#999999"));
             c.drawCircle(ballx, bally, ballradius, red);
 
             Paint rec = new Paint();
-            rec.setColor(Color.BLACK);
+            rec.setColor(Color.parseColor("#FFEB3B"));
             rx += rectDeltaX;
             if (rx < 0) {
                 rx = 0;

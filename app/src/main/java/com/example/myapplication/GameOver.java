@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,6 +20,7 @@ public class GameOver extends AppCompatActivity {
         setContentView(R.layout.activity_game_over);
 
         Button restartButton = findViewById(R.id.buttonrestart);
+        restartButton.setBackgroundColor(Color.parseColor("#009688"));
         restartButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
